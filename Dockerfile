@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5678
 
 # Rodar o n8n com autenticação básica
-CMD ["npx", "n8n", "start", "--tunnel", "--host", "0.0.0.0", "--port", "5678", "--auth.basic.active=true", "--auth.basic.user=${N8N_BASIC_AUTH_USER}", "--auth.basic.password=${N8N_BASIC_AUTH_PASSWORD}"]
+CMD [ "npx", "n8n", "start", "--tunnel" ]
