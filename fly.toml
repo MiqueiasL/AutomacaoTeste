@@ -33,6 +33,8 @@ processes = []
     handlers = ["tls", "http"]
     port = 443
 
-  [[services.services]]
-    internal_port = 9090
-    protocol = "tcp"
+[[services.tcp_checks]]
+  interval = 10000
+  timeout = 2000
+  grace_period = "10s"
+
