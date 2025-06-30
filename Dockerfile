@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5678
 
 # Rodar o n8n com autenticação básica
-CMD [ "npx", "n8n", "start", "--tunnel" ]
+CMD ["npx", "n8n", "start"]
