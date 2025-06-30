@@ -2,6 +2,7 @@ app = "automacaoteste"
 primary_region = "gru"
 kill_signal = "SIGINT"
 kill_timeout = "10s"
+console_command = "/bin/bash"
 
 [build]
   dockerfile = "Dockerfile"
@@ -16,6 +17,8 @@ kill_timeout = "10s"
   WEBHOOK_URL = "https://automacaoteste.fly.dev/"
   N8N_EDITOR_BASE_URL = "https://automacaoteste.fly.dev/"
   NODE_ENV = "production"
+
+[deploy]
 
 [http_service]
   internal_port = 5678
