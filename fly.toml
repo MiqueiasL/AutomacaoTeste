@@ -14,8 +14,11 @@ processes = []
   allowed_public_ports = [5678]
   auto_rollback = true
 
+[deploy]
+  release_command = "npx n8n update:all"
+
 [build]
-  dockerfile = "Dockerfile"
+  image = "n8nio/n8n:latest"
 
 [metrics]
   port = 9090
@@ -36,4 +39,3 @@ processes = []
   interval = 10000
   timeout = 2000
   grace_period = "10s"
-
