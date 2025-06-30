@@ -10,17 +10,12 @@ processes = []
   N8N_HOST = "0.0.0.0"
   WEBHOOK_URL = "https://automacaoteste.fly.dev/"
 
-
 [experimental]
   allowed_public_ports = [5678]
   auto_rollback = true
 
-[deploy]
-  release_command = "npx n8n update:all"
-
 [build]
-  image = "n8nio/n8n:latest"
-
+  dockerfile = "Dockerfile"
 
 [metrics]
   port = 9090
