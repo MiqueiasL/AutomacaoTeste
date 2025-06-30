@@ -19,7 +19,8 @@ processes = []
   release_command = "npx n8n update:all"
 
 [build]
-  image = "node:18-slim"
+  image = "n8nio/n8n:latest"
+
 
 [metrics]
   port = 9090
