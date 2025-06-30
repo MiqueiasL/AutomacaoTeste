@@ -7,6 +7,9 @@ processes = []
   N8N_BASIC_AUTH_ACTIVE = "true"
   N8N_BASIC_AUTH_USER = "admin"
   N8N_BASIC_AUTH_PASSWORD = "senha123"
+  N8N_HOST = "0.0.0.0"
+  WEBHOOK_URL = "https://automacaoteste.fly.dev/"
+
 
 [experimental]
   allowed_public_ports = [5678]
