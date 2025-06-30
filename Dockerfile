@@ -16,5 +16,5 @@ ENV NODE_ENV=production
 # Expor a porta
 EXPOSE 5678
 
-# Comando de inicialização
-CMD ["n8n", "start"]
+# Comando de inicialização com parâmetros explícitos
+CMD ["n8n", "start", "--host", "0.0.0.0", "--port", "5678"]
