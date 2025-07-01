@@ -2,7 +2,6 @@ app = "automacaoteste"
 primary_region = "gru"
 kill_signal = "SIGINT"
 kill_timeout = "10s"
-console_command = "/bin/bash"
 
 [build]
   dockerfile = "Dockerfile"
@@ -10,15 +9,13 @@ console_command = "/bin/bash"
 [env]
   N8N_HOST = "0.0.0.0"
   N8N_PORT = "5678"
-  N8N_PROTOCOL = "http"
+  N8N_PROTOCOL = "https"
   N8N_BASIC_AUTH_ACTIVE = "true"
   N8N_BASIC_AUTH_USER = "admin"
   N8N_BASIC_AUTH_PASSWORD = "senha123"
-  WEBHOOK_URL = "https://automacaoteste.fly.dev/"
-  N8N_EDITOR_BASE_URL = "https://automacaoteste.fly.dev/"
+  WEBHOOK_URL = "https://automacaoteste.fly.dev"
+  N8N_EDITOR_BASE_URL = "https://automacaoteste.fly.dev"
   NODE_ENV = "production"
-
-[deploy]
 
 [http_service]
   internal_port = 5678
@@ -26,22 +23,6 @@ console_command = "/bin/bash"
   auto_stop_machines = "stop"
   auto_start_machines = true
   min_machines_running = 1
-  max_machines_running = 1
-
-  [http_service.http_options]
-    response_header.x-fly-region = "gru"
-
-[[http_service.checks]]
-  interval = "30s"
-  timeout = "10s"
-  grace_period = "30s"
-  method = "GET"
-  path = "/"
-  protocol = "http"
-  tls_skip_verify = false
-
-  [http_service.checks.headers]
-    Authorization = "Basic YWRtaW46c2VuaGExMjM="
 
 [vm]
   memory = "512mb"
